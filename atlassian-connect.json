@@ -1,0 +1,34 @@
+{
+  "key": "sample-app",
+  "name": "Sample app",
+  "description": "My very first app",
+  "baseUrl": "https://5aee-103-211-53-62.ngrok.io/",
+  "authentication": {
+    "type": "jwt"
+  },
+  "lifecycle": {
+    "installed": "/installed"
+  },
+  "scopes": ["READ", "WRITE"],
+  "apiMigrations": {
+    "signed-install": true
+  },
+  "modules": {
+    "dynamicContentMacros": [
+      {
+        "key": "Sample-speak",
+        "height": "1px",
+        "width": "1px",
+        "name": {
+          "value": "Sample app"
+        },
+        "url": "/audio",
+        "description": {
+          "value": "Sample recorder app"
+        },
+        "outputType": "inline",
+        "bodyType": "none"
+      }
+    ]
+  }
+}

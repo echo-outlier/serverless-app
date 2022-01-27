@@ -1,0 +1,11 @@
+/* App styles */
+
+.button {
+  padding: 10px;
+  color: white;
+  background-color: rgb(79, 103, 201);
+}
+
+.aui-blanket {
+  display: none !important;
+}
