@@ -1,6 +1,5 @@
 const serverless = require("serverless-http");
 const express = require("express");
-const atlassianfile = require("./atlassian-connect.json");
 
 const bodyParser = require("body-parser");
 const compression = require("compression");
@@ -19,7 +18,7 @@ const ace = require("atlassian-connect-express");
 const hbs = require("express-hbs");
 
 const routes = require("./routes");
-// const { addServerSideRendering } = require("./addServerSideRendering");
+const addServerSideRendering = require("./addServerSideRendering");
 
 // Bootstrap Express and atlassian-connect-express
 console.log("1");
@@ -51,7 +50,7 @@ app.set("views", viewsDir);
 
 // Configure jsx (jsx files should go in views/ and export the root component as the default export)
 console.log("8");
-// addServerSideRendering(app, handlebarsEngine);
+addServerSideRendering(app, handlebarsEngine);
 
 // Atlassian security policy requirements
 // http://go.atlassian.com/security-requirements-for-cloud-apps
